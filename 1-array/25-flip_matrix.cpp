@@ -1,3 +1,16 @@
+/*
+    Matrix       Index
+    1  2  3    00  01  02
+    4  5  6    10  11  12
+    7  8  9    20  21  22
+
+    Flipped
+    7  8  9
+    4  5  6
+    1  2  3
+
+
+  */
 #include <iostream>
 using namespace std;
 
@@ -24,6 +37,5 @@ int main() {
     cout << '\n';
   }
 
-  
   return 0;
 }
