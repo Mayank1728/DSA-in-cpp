@@ -1,53 +1,49 @@
-#include <bits/stdc++.h>
-using namespace std;
-class Node {
+class Solution {
 public:
-  int data;
-  Node *next;
-  Node(int data) {
-    this->data = data;
-    next = NULL;
+  int evalRPN(vector<string> &tokens) {
+    stack<int> stack;
+    int res = 0, first, sec;
+    for (auto t : tokens) {
+      if (t == "+") {
+        sec = stack.top();
+        stack.pop();
+        first = stack.top();
+        stack.pop();
+        res = first + sec;
+        stack.push(first);
+        stack.push(sec);
+        stack.push(res);
+      } else if (t == "-") {
+        sec = stack.top();
+        stack.pop();
+        first = stack.top();
+        stack.pop();
+        res = first - sec;
+        stack.push(first);
+        stack.push(sec);
+        stack.push(res);
+      } else if (t == "*") {
+        sec = stack.top();
+        stack.pop();
+        first = stack.top();
+        stack.pop();
+        res = first * sec;
+        stack.push(first);
+        stack.push(sec);
+        stack.push(res);
+      } else if (t == "/") {
+        sec = stack.top();
+        stack.pop();
+        first = stack.top();
+        stack.pop();
+        res = first / sec;
+        stack.push(first);
+        stack.push(sec);
+        stack.push(res);
+      } else {
+        stack.push(stoi(r));
+      }
+    }
+    return stack.top();
   }
 };
-class Stack {
-public:
-  Node *head;
-  Stack() { head = NULL; }
-  void push(int data) {
-    Node *n = new Node(data);
-    n->next = head;
-    head = n;
-  }
-  void pop() {
-    if (!head) {
-      cout << "Stack underFlow" << endl;
-      return;
-    }
-    Node *tmp = head;
-    head = head->next;
-    delete tmp;
-  }
-  int peek() {
-    if (!head) {
-      cout << "Stack Empty" << endl;
-      return -1;
-    }
-    cout << head->data << endl;
-    return head->data;
-  }
-  bool isEmpty() { return head == NULL; }
-};
-
-int main() {
-  Stack music;
-  music.push(10);
-  music.push(30);
-  music.push(50);
-  music.peek();
-  music.pop();
-  music.peek();
-  music.pop();
-  music.peek();
-  music.push(100);
-  music.peek();
-}
