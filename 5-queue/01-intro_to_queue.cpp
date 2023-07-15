@@ -1,45 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 0 1 2 3 4
-// 1 3 8 6 2
-//
+// implementation of circular queue
 class Queue {
 public:
-  int front, rear, size;
+  int front, rear;
   int *arr;
+  int size;
   Queue(int size) {
-    arr = new int[size];
     this->size = size;
-    front = 0;
-    rear = 0;
+    arr = new int[size];
+    front = -1;
+    rear = -1;
   }
   void push(int val) {
-   // check whether queue is full
-    if (front == rear || rear % size == front) {
-      cout << "Queue overflow" << endl;
-      return;
+    // full, empty and normal
+    if (empty()) {
+      front++;
+      rear++;
+      arr[rear] = val;
+    } else if (full()) {
+      cout << "Queue is FULL!!" << endl;
+    } else {
+      rear = (rear + 1) % size;
+      arr[rear] = val;
     }
-   if(rear == size){
-    rear = rear % size;
-    arr[rear++] = val;
-   }
-   // check whether this will work
-    arr[rear++] = val;
   }
   void pop() {
-    if (front == rear) {
-      cout << "Queue is empty" << endl;
-      front = 0;
-      rear = 0;
+    // empty, last element and normal
+    if (empty()) {
+      cout << "Queue is EMPTY!!" << endl;
+    } else if (front == rear) {
+      front = -1;
+      rear = -1;
+    } else {
+      front = (front + 1) % size;
     }
-    front++;
   }
-  int top() {
-    if (front == rear)
-      cout << "Queue is Empty!!" << endl;
-    else
-      cout << arr[front] << endl;
+  bool empty() { return front == -1 && rear == -1; }
+  bool full(){
+    return (rear + 1 % size == front);
   }
 };
 int main() {
@@ -49,7 +49,4 @@ int main() {
   player.push(12);
   player.push(29);
   player.push(77);
-  player.pop();
-  player.push(50);
-  player.top();
 }
