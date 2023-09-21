@@ -25,3 +25,19 @@ void postOrder(TreeNode *root) {
   postOrder(root->right);
   cout << root->val << endl;
 }
+
+void bfs(TreeNode *root) {
+  if (root == NULL)
+    return;
+  queue<TreeNode *> q;
+  q.push(root);
+  while (q.size()) {
+    TreeNode *curr = q.front();
+    cout << curr->val << endl;
+    if (curr->left)
+      q.push(curr->left);
+    if (curr->right)
+      q.push(curr->right);
+    q.pop();
+  }
+}
