@@ -1,0 +1,97 @@
+#Questions
+
+What errors, challenges did you face and how did you overcome them ?
+Explain the scenario how you troubleshooted the error ? How did you find the error ? What was the error ? How did you fix it ?
+What is elk ? How do you use it ? What is exactly does ? Why do we need it ?
+How did each microservice work all together ? What services/applications were consuming them ? What services do these microservices consumed ?
+Know which version of java, springboot, kafka, project reactor, MySQL we are using in UAT as well as production.
+How did you write the configuratin files for these services ? What exactly do we need to write in the configuration files.
+Try understanding what would you need to write if you were creating all these microservices from scratch ?
+What is waterfall or Agile method ? what is SDLC ? Why do we need it and what exactly does 
+
+UCIC
+What is a microservice ? What exactly did you do ? What constitutes a microservice ? What files did you write and what do they signify and contain ?
+What is an API contract ? How did you implement this ? What exactly did you do ?
+What is stakeholder decision ? What comes under it ?
+What is database schema design ? What exactly you need to do ? What did you do for SQL and what did you do for java ?
+What are transaction ? How do you know there were 4k daily transactions ?
+What is cron job ? Why do we need them ? 
+What is retry, fallback, timeout, circuit breaker mechanisms ? How does this makes systems more reliable ?
+
+PDF library Migration
+What do you mean when you say "Migrating library from ItextPDF to PDFBox" ? How did you manage to do this across all backend services
+	How many services were using them ?
+What is CI/CD pipelines and how did you use this in the project ?
+What is deployment and what is downtime ?
+How do you know it is handling 30k requests daily ?
+
+Account Aggregator
+Created for credit under writing assesment.
+How are you exchanging customer data securely ? base64 ? Thats it ?
+Who were the other financial entities ?
+What is a JSON request ?
+	What does an HTTP request looks like ? What happens when its hits the service ? What happens if it fails regex ? What happens when the code fails
+	What are the most popular status codes ? What are all the HTTP methods and explain them ? WHy do we need them ?
+	Explain what is regexp and how you are using it ?
+What is RESTful service ? Why is it called rest ? WHat does REST signify ?
+Which 7 RESTful APIs did you consume ? 
+What are SOAP APIs and how they are different from REST Apis ? How did you integrate both types of APIs ?
+What is the difference b/w xml and json ?
+What validations or checks were present on it ?
+What are unit tests ? Why do we need them ? What does 80%+ coverage means ? What is the standard ? What tools are used here ?
+
+Risk Categorization
+What is refactoring and debugging ? What exactly did you debugged ? What error was present and how did you fix it using design patterns ?
+What are most commonly used and implemented design patterns and which ones did you use ?
+What is exception handling ? What exceptions occured ? What is the exception hirearchy ?
+How did you optimized hibernate queries ? What is hibernate why do we need it ? How much of an impact it had ?
+What is RCA and what it constitutes ? 
+What were the 3 production fixes ? How did you measure the response time increased by 28% ? What is calculation metric ?
+What is response time ?
+
+Data Vault Integration
+What were the 3 APIs ? 
+What is Data Vault and its usage ?
+What is schema validations and how did you conduct them ?
+What is indexing ? How did you optimize it ?
+What is latency ? How did you decrease it by 45% ? How did you measure the time and calculation ?
+
+Projects
+What is MVC architecture ?
+
+Skills
+What is HTML ?
+What is CSS ?
+What is JUnit ?
+What is Maven ?
+What is MongoDB ?
+WHat is Hibernate ?
+What is Kafka ?
+What is AWS ? Where exactly did you use it and how ?
+What is Docker and Kubernetes ?
+What is GIT ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
